@@ -1,0 +1,16 @@
+version: '2'
+services:
+  # api:
+  #   image: data-stack-api
+  # db:
+  #   image: postgres
+  ui:
+    build: .
+    command: python manage.py
+    volumes:
+      - .:/app/ui
+    ports:
+      - "8080:8080"
+  #   depends_on:
+  #     - db
+  #     - api

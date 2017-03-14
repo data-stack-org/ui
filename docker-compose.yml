@@ -6,7 +6,7 @@ services:
   #   image: postgres
   ui:
     build: .
-    command: python manage.py
+    image: data-stack-ui:5
     volumes:
       - .:/app/ui
     ports:
